@@ -6,10 +6,26 @@ const OptimizeCSSAssetsPlugin  = require('optimize-css-assets-webpack-plugin')
 const MiniCSSExtractPlugin     = require('mini-css-extract-plugin')
 const UglifyJSPlugin           = require('uglifyjs-webpack-plugin')
 const CompressionPlugin        = require('compression-webpack-plugin')
+const ExtractTextPlugin        = require("extract-text-webpack-plugin")
+const path                     = require("path")
+const glob                     = require("glob-all")
+const PurgecssPlugin           = require("purgecss-webpack-plugin")
 const helpers                  = require('./helpers')
 const commonConfig             = require('./webpack.config.common')
 const isProd                   = process.env.NODE_ENV === 'production'
 const environment              = isProd ? require('./env/prod.env') : require('./env/staging.env')
+
+
+/**
+ * Custom PurgeCSS Extractor
+ * https://github.com/FullHuman/purgecss
+ * https://github.com/FullHuman/purgecss-webpack-plugin
+ */
+class TailwindExtractor {
+  static extract(content) {
+    return content.match(/[A-z0-9-:\/]+/g);
+  }
+}
 
 const webpackConfig = merge(commonConfig, {
   mode: 'production',
@@ -54,6 +70,15 @@ const webpackConfig = merge(commonConfig, {
       }
     }
   },
+  rules: [
+    {
+      test: /\.css$/,
+      use: ExtractTextPlugin.extract({
+        fallback: "style-loader",
+        use: [{ loader: "css-loader", options: { importLoaders: 1 } }, "postcss-loader"]
+      })
+    }
+  ],
   plugins: [
     new webpack.EnvironmentPlugin(environment),
     new MiniCSSExtractPlugin({
@@ -67,8 +92,20 @@ const webpackConfig = merge(commonConfig, {
       threshold: 10240,
       minRatio: 0.8
     }),
-    new webpack.HashedModuleIdsPlugin()
-  ]
+    new webpack.HashedModuleIdsPlugin(),
+    new ExtractTextPlugin("styles.css"),
+    new PurgecssPlugin({
+      paths: glob.sync([
+        path.join(__dirname, "resources/assets/js/**/*.vue")
+      ]),
+      extractors: [
+        {
+          extractor: TailwindExtractor,
+          extensions: ["js", "vue"]
+        }
+      ]
+    })
+  ],
 })
 
 if (!isProd) {
