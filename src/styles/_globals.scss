@@ -1,0 +1,68 @@
+/* purgecss ignore */
+
+$partnerThemes: (
+        base : (
+                gray: #424242,
+                black: #333333,
+                white: #f7f7f7,
+        ),
+        default : (
+                primary: #2D99FF,
+                secondary: #2dafa0,
+                primary-light: #63b3ed,
+                secondary-light: #2cd9c5, //20% lighten
+        ),
+        partner-1 : (
+                primary: #ff9a1f,
+                secondary: #2457e9,
+                primary-light: #ffb965,
+                secondary-light: #2355FD, //20% lighten
+        )
+);
+
+:root {
+  --base-gray: #424242;
+  --base-black: #333333;
+  --base-white: #f7f7f7;
+
+  --default-primary: #2D99FF;
+  --default-primary-light: #63b3ed;
+  --default-secondary: #2dafa0;
+  --default-secondary-light: #2cd9c5;]
+
+  --partner-1-primary: #f8a21c;
+  --partner-1-primary-light: #ffb965;
+  --partner-1-secondary: #3182ce;
+  --partner-1-secondary-light: #64B5FF;
+}
+
+@mixin renderThemeBase($partner, $themeKey, $cssProp) {
+  @each $partners in $partnerThemes {
+    $partnerKey: nth($partners, 1);
+    $partnerValues: nth($partners, 2);
+    @if ($partner == $partnerKey) {
+      @each $context, $hex in $partnerValues {
+        @if ($context == $themeKey) {
+          #{$cssProp}: $hex;
+          //@debug #{$cssProp} $hex;
+        }
+      }
+    }
+  }
+}
+
+//tw color = blue, no of childs => 9, animation-step = 0.09s
+@mixin renderAnimatedBarLoader($twBaseColor) {
+  $step: 1;
+  $animationDelay: 0s;
+
+  @while $step < 10 {
+    div:nth-child(#{$step}) {
+      @apply bg-#{$twBaseColor}-#{$step}00;
+      animation-delay: $animationDelay;
+    }
+    $animationDelay: $animationDelay + 0.09s;
+    $step: $step + 1;
+  }
+}
+/* purgecss end ignore */

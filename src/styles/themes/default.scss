@@ -1,0 +1,51 @@
+/* purgecss ignore */
+@import '../_globals';
+
+body {
+  background-image: linear-gradient(to bottom right, #121638, #121638);
+}
+
+.text-primary {
+  @include renderThemeBase(default, primary, color);
+
+  &.hover-light {
+    @include renderThemeBase(base, white, color);
+
+    &:hover {
+      @include renderThemeBase(default, primary-light, color);
+    }
+  }
+}
+
+.text-secondary {
+  @include renderThemeBase(default, secondary, color);
+}
+
+.bg-primary, .btn-primary {
+  @include renderThemeBase(default, primary, background-color);
+}
+
+.border-primary {
+  @include renderThemeBase(default, primary, border-color);
+}
+
+.border-secondary {
+  @include renderThemeBase(default, secondary, border-color);
+}
+
+.progress-bar-completed {
+  background: linear-gradient(to right, var(--default-primary) 0%, var(--default-secondary) 100%);
+}
+
+.splash-load {
+  @include renderAnimatedBarLoader('blue')
+}
+
+.page-loader {
+  @include renderThemeBase(default, primary, color);
+  &:before, &:after {
+    @include renderThemeBase(default, primary, background-color);
+  }
+}
+
+/* purgecss end ignore */
