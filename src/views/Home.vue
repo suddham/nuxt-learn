@@ -8,15 +8,15 @@
 
 <script>
   export default {
-    name: 'PricingHome',
-    data() {
+    name: 'Home',
+    data () {
       return {
-        route: 'Pricing Table'
+        route: 'Home',
       }
-    }
+    },
   }
 </script>
 
-<style scoped>
+<style scoped lang="scsss">
 
 </style>

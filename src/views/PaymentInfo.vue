@@ -8,15 +8,15 @@
 
 <script>
   export default {
-    name: 'AppHome',
+    name: 'PaymentInfo',
     data () {
       return {
-        route: 'Home Page',
+        route: 'Payment Information'
       }
     },
   }
 </script>
 
-<style scoped lang="scsss">
+<style scoped>
 
 </style>
