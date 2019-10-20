@@ -4,9 +4,9 @@
             <h1 class="text-5xl text-center">Test App</h1>
 
             <div class="text-right px-10 text-2xl">
-                <router-link :to="{ name: 'Home' }">Home</router-link> |
-                <router-link :to="{ name: 'Pricing' }">Pricing</router-link> |
-                <router-link :to="{ name: 'PaymentInfo' }">Payment Information</router-link>
+                <router-link class="px-2" :to="{ name: 'Home' }">Home</router-link> |
+                <router-link class="px-2" :to="{ name: 'Pricing' }">Pricing</router-link> |
+                <router-link class="px-2" :to="{ name: 'PaymentInfo' }">Payment Information</router-link>
             </div>
 
             <div class="container max-w-2xl mx-auto bg-white shadow-lg rounded-lg min-h-screen py-4 px-8 text-left">
@@ -25,6 +25,10 @@
   }
 </script>
 
-<style scoped>
-
+<style scoped lang="scss">
+    .router-link-exact-active {
+        &.active-route {
+            @apply border-b-4 border-indigo-500 text-indigo-600;
+        }
+    }
 </style>
