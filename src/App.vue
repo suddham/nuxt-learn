@@ -1,5 +1,5 @@
 <template>
-    <div id="app" class="bg-gray-100">
+    <div id="app" class="bg-gray-200">
         <div>
             <h1 class="text-5xl text-center">Test App</h1>
 
@@ -9,7 +9,7 @@
                 <router-link class="px-2" :to="{ name: 'PaymentInfo' }">Payment Information</router-link>
             </div>
 
-            <div class="container max-w-2xl mx-auto bg-white shadow-lg rounded-lg min-h-screen py-4 px-8 text-left">
+            <div class="container mx-auto py-4 px-8 text-left">
                 <router-view></router-view>
             </div>
         </div>
