@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h1 class="text-3xl mx-auto">
+        <h1 class="text-3xl mx-auto text-green-700">
             {{route}}
         </h1>
     </div>
