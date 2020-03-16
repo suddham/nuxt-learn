@@ -1,9 +1,5 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '@/views/Home'
-import Pricing from '@/views/Pricing'
-import PaymentInfo from '@/views/PaymentInfo'
-import TableHello from '@/components/Pricing/Table'
 
 
 Vue.use(VueRouter)
@@ -12,17 +8,17 @@ const routes = [
   {
     path: '/',
     name: 'Home',
-    component: Home
+    component: () => import('@/views/Home')
   },
   {
     path: '/pricing',
     name: 'Pricing',
-    component: Pricing, TableHello
+    component: () => import('@/views/Pricing'),
   },
   {
     path: '/payment-info',
     name: 'PaymentInfo',
-    component: PaymentInfo
+    component: () => import('@/views/PaymentInfo')
   },
 ]
 

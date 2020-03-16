@@ -1,13 +1,13 @@
 <template>
-    <div class="py-10 px-6 bg-gray-200">
+    <div class="py-10 md:px-6 bg-gray-200">
         <h1 class="text-2xl font-semibold text-gray-900 leading-tight">
             Finding the right product can be difficult, we are here to help!
         </h1>
 
         <h3 class="mt-4 text-gray-600"> Try free for 14 days, no credit card details required.</h3>
 
-        <div class="flex flex-col md:flex-row">
-            <div class="mt-10 max-w-2xl border-gray-100 border">
+        <div class="flex flex-col md:flex-row items-center justify-center">
+            <div class="mt-6 md:mt-10 border-gray-100 border max-w-md mx-auto">
                 <div class="bg-white rounded-lg shadow-md">
                     <div class="p-5">
                         <h2 class="font-medium text-gray-900 text-center">Basic</h2>
@@ -15,9 +15,8 @@
                             <span class="text-3xl font-semibold text-gray-900">$9.99</span>
                             <span class="text-gray-600">/mo</span>
                         </div>
-                        <p class="mt-2 w-56 mx-auto text-sm text-gray-600 text-center">Basic starting package with all
-                            amenities included to launch your new idea off.</p>
-                        <a class="mt-4 bg-gray-800 py-2 px-3 rounded-lg text-white text-sm font-semibold block w-full text-center hover:bg-gray-700">
+                        <p class="mt-2 w-56 mx-auto text-sm text-gray-600 text-center">Basic starting package recommended for start ups.</p>
+                        <a class="max-w-xs mx-auto mt-2 md:mt-4 bg-gray-800 py-2 px-2 md:py-2 md:px-3 rounded-lg text-white text-sm font-semibold block text-center hover:bg-gray-700">
                             Buy Basic </a>
                     </div>
 
@@ -148,11 +147,15 @@
 
                             </tbody>
                         </table>
+                        <div class="border-t-2 border-gray-200 px-5 py-5">
+                            <a class="max-w-xs mx-auto mt-2 md:mt-4 bg-gray-800 py-2 px-2 md:py-2 md:px-3 rounded-lg text-white text-sm font-semibold block text-center hover:bg-gray-700">
+                                Buy Basic </a>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <div class="mt-10 max-w-2xl border-gray-100 border">
+            <div class="mt-6 md:mt-10 border-gray-100 border max-w-md mx-auto">
                 <div class="bg-white rounded-lg shadow-md">
                     <div class="p-5">
                         <h2 class="font-medium text-gray-900 text-center">Silver</h2>
@@ -160,9 +163,8 @@
                             <span class="text-3xl font-semibold text-gray-900">$14.99</span>
                             <span class="text-gray-600">/mo</span>
                         </div>
-                        <p class="mt-2 w-56 mx-auto text-sm text-gray-600 text-center">Basic starting package with all
-                            amenities included to launch your new idea off.</p>
-                        <a class="mt-4 bg-gray-800 py-2 px-3 rounded-lg text-white text-sm font-semibold block w-full text-center hover:bg-gray-700">
+                        <p class="mt-2 w-56 mx-auto text-sm text-gray-600 text-center">Ideal for small businesses requiring automation.</p>
+                        <a class="max-w-xs mx-auto mt-2 md:mt-4 bg-gray-800 py-2 px-2 md:py-2 md:px-3 rounded-lg text-white text-sm font-semibold block text-center hover:bg-gray-700">
                             Buy Silver </a>
                     </div>
                     <div>
@@ -290,11 +292,15 @@
                             </tr>
                             </tbody>
                         </table>
+                        <div class="border-t-2 border-gray-200 px-5 py-5">
+                            <a class="max-w-xs mx-auto mt-2 md:mt-4 bg-gray-800 py-2 px-2 md:py-2 md:px-3 rounded-lg text-white text-sm font-semibold block text-center hover:bg-gray-700">
+                                Buy Silver </a>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <div class="mt-10 max-w-2xl border-gray-100 border">
+            <div class="mt-6 md:mt-10 border-gray-100 border max-w-md mx-auto">
                 <div class="bg-white rounded-lg shadow-md">
                     <div class="p-5">
                         <h2 class="font-medium text-gray-900 text-center">Gold</h2>
@@ -302,9 +308,8 @@
                             <span class="text-3xl font-semibold text-gray-900">$19.99</span>
                             <span class="text-gray-600">/mo</span>
                         </div>
-                        <p class="mt-2 w-56 mx-auto text-sm text-gray-600 text-center">Basic starting package with all
-                            amenities included to launch your new idea off.</p>
-                        <a class="mt-4 bg-gray-800 py-2 px-3 rounded-lg text-white text-sm font-semibold block w-full text-center hover:bg-gray-700">
+                        <p class="mt-2 w-56 mx-auto text-sm text-gray-600 text-center">Medium businesses with additional tech support provided.</p>
+                        <a class="max-w-xs mx-auto mt-2 md:mt-4 bg-gray-800 py-2 px-2 md:py-2 md:px-3 rounded-lg text-white text-sm font-semibold block text-center hover:bg-gray-700">
                             Buy Gold </a>
                     </div>
                     <div>
@@ -432,11 +437,17 @@
                             </tr>
                             </tbody>
                         </table>
+
+                        <div class="border-t-2 border-gray-200 px-5 py-5">
+                            <a class="max-w-xs mx-auto mt-2 md:mt-4 bg-gray-800 py-2 px-2 md:py-2 md:px-3 rounded-lg text-white text-sm font-semibold block text-center hover:bg-gray-700">
+                                Buy Gold </a>
+                        </div>
+
                     </div>
                 </div>
             </div>
 
-            <div class="mt-10 max-w-2xl border-gray-100 border">
+            <div class="mt-6 md:mt-10 border-gray-100 border max-w-md mx-auto">
                 <div class="bg-white rounded-lg shadow-md">
                     <div class="p-5">
                         <h2 class="font-medium text-gray-900 text-center">Diamond</h2>
@@ -444,9 +455,8 @@
                             <span class="text-3xl font-semibold text-gray-900">$24.99</span>
                             <span class="text-gray-600">/mo</span>
                         </div>
-                        <p class="mt-2 w-56 mx-auto text-sm text-gray-600 text-center">Basic starting package with all
-                            amenities included to launch your new idea off.</p>
-                        <a class="mt-4 bg-gray-800 py-2 px-3 rounded-lg text-white text-sm font-semibold block w-full text-center hover:bg-gray-700">
+                        <p class="mt-2 w-56 mx-auto text-sm text-gray-600 text-center">Enterprise level with 99.98% SLA and full features.</p>
+                        <a class="max-w-xs mx-auto mt-2 md:mt-4 bg-gray-800 py-2 px-2 md:py-2 md:px-3 rounded-lg text-white text-sm font-semibold block text-center hover:bg-gray-700">
                             Buy Diamond </a>
                     </div>
                     <div>
@@ -574,78 +584,15 @@
                             </tr>
                             </tbody>
                         </table>
+                        <div class="border-t-2 border-gray-200 px-5 py-5">
+                            <a class="max-w-xs mx-auto mt-2 md:mt-4 bg-gray-800 py-2 px-2 md:py-2 md:px-3 rounded-lg text-white text-sm font-semibold block text-center hover:bg-gray-700">
+                                Buy Diamond </a>
+                        </div>
                     </div>
                 </div>
             </div>
-
         </div>
 
-        <div class="flex flex-col md:flex-row">
-            <div class="mt-10 max-w-2xl border-gray-100 border">
-                <div class="bg-white rounded-lg shadow-md">
-                    <div class="p-5">
-                        <h2 class="font-medium text-gray-900 text-center">Essential Diamond</h2>
-                        <div class="mt-1 text-center">
-                            <span class="text-3xl font-semibold text-gray-900">$49.99</span>
-                            <span class="text-gray-600">/mo</span>
-                        </div>
-                        <p class="mt-2 w-56 mx-auto text-sm text-gray-600 text-center">Basic starting package with all
-                            amenities included to launch your new idea off.</p>
-                        <a class="mt-4 bg-gray-800 py-2 px-3 rounded-lg text-white text-sm font-semibold block w-full text-center hover:bg-gray-700">
-                            Buy Essential Diamond </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="mt-10 max-w-2xl border-gray-100 border">
-                <div class="bg-white rounded-lg shadow-md">
-                    <div class="p-5">
-                        <h2 class="font-medium text-gray-900 text-center">Platinum</h2>
-                        <div class="mt-1 text-center">
-                            <span class="text-3xl font-semibold text-gray-900">$64.99</span>
-                            <span class="text-gray-600">/mo</span>
-                        </div>
-                        <p class="mt-2 w-56 mx-auto text-sm text-gray-600 text-center">Basic starting package with all
-                            amenities included to launch your new idea off.</p>
-                        <a class="mt-4 bg-gray-800 py-2 px-3 rounded-lg text-white text-sm font-semibold block w-full text-center hover:bg-gray-700">
-                            Buy Platinum </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="mt-10 max-w-2xl border-gray-100 border">
-                <div class="bg-white rounded-lg shadow-md">
-                    <div class="p-5">
-                        <h2 class="font-medium text-gray-900 text-center">Essential Platinum</h2>
-                        <div class="mt-1 text-center">
-                            <span class="text-3xl font-semibold text-gray-900">$84.99</span>
-                            <span class="text-gray-600">/mo</span>
-                        </div>
-                        <p class="mt-2 w-56 mx-auto text-sm text-gray-600 text-center">Basic starting package with all
-                            amenities included to launch your new idea off.</p>
-                        <a class="mt-4 bg-gray-800 py-2 px-3 rounded-lg text-white text-sm font-semibold block w-full text-center hover:bg-gray-700">Buy
-                            Essential Platinum </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="mt-10 max-w-2xl border-gray-100 border">
-                <div class="bg-white rounded-lg shadow-md">
-                    <div class="p-5">
-                        <h2 class="font-medium text-gray-900 text-center">Royal</h2>
-                        <div class="mt-1 text-center">
-                            <span class="text-3xl font-semibold text-gray-900">99.99</span>
-                            <span class="text-gray-600">/mo</span>
-                        </div>
-                        <p class="mt-2 w-56 mx-auto text-sm text-gray-600 text-center">Basic starting package with all
-                            amenities included to launch your new idea off.</p>
-                        <a class="mt-4 bg-gray-800 py-2 px-3 rounded-lg text-white text-sm font-semibold block w-full text-center hover:bg-gray-700">
-                            Buy Royal </a>
-                    </div>
-                </div>
-            </div>
-
-        </div>
     </div>
 </template>
 

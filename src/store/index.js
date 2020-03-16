@@ -13,7 +13,7 @@ const store = new Vuex.Store({
   modules: {
     a: form
   },
-  strict: debug,
+  strict: true,
   plugins: debug? [ createLogger() ] : [],
 })
 
